@@ -65,13 +65,17 @@ type Geolocation struct {
 
 // AssetState stores current state for any assset
 type AssetState struct {
-    AssetID     *string      `json:"assetID,omitempty"`     // all assets must have an ID, primary key of contract
-    Location    *Geolocation `json:"location,omitempty"`    // current asset location
-    Temperature *float64     `json:"temperature,omitempty"` // asset temp
-    Humidity    *float64     `json:"humidity,omitempty"`    // asset humidity
-    Shock       *string      `json:"shock,omitempty"`       // asset shocked
-    Tilt        *string      `json:"tilt,omitempty"`        // Asset has been titled
-    Carrier     *string      `json:"carrier,omitempty"`     // the name of the carrier
+    AssetID     *string       `json:"assetID,omitempty"`     // all assets must have an ID, primary key of contract
+    Location    *Geolocation  `json:"location,omitempty"`    // current asset location
+    SensorType  *string       `json:"sensorType,omitempty"`
+    SensorValue  *string      `json:"sensorValue,omitempty"`
+    Threshold    *string      `json:"sensorValue,omitempty"`
+    // Temperature *float64     `json:"temperature,omitempty"` // asset temp
+    // TempThresh  
+    // Humidity    *float64     `json:"humidity,omitempty"`    // asset humidity
+    // Shock       *string      `json:"shock,omitempty"`       // asset shocked
+    // Tilt        *string      `json:"tilt,omitempty"`        // Asset has been titled
+    // Carrier     *string      `json:"carrier,omitempty"`     // the name of the carrier
 }
 
 var contractState = ContractState{MYVERSION}
