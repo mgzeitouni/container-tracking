@@ -68,6 +68,9 @@ type AssetState struct {
     AssetID     *string      `json:"assetID,omitempty"`     // all assets must have an ID, primary key of contract
     Location    *Geolocation `json:"location,omitempty"`    // current asset location
     Temperature *float64     `json:"temperature,omitempty"` // asset temp
+    Humidity    *float64     `json:"humidity,omitempty"`    // asset humidity
+    Shock       *string      `json:"shock,omitempty"`       // asset shocked
+    Tilt        *string      `json:"tilt,omitempty"`        // Asset has been titled
     Carrier     *string      `json:"carrier,omitempty"`     // the name of the carrier
 }
 
